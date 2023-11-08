@@ -1,0 +1,19 @@
+name: Build AirSignal Docker image
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-docker:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login to container registry
+        run: echo ${{ secrets.CONTAINER_REGISTRY_TOKEN }} | docker login -u ${{ secrets.CONTAINER_REGISTRY_USER }} http://gitea:3000
+      - name: Build Docker image
+        run: docker build . --file Dockerfile --tag christoph/airsignal:latest
+      - name: Push Docker image
+        run: docker push christoph/airsignal:latest
+
+    
