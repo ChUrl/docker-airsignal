@@ -17,4 +17,5 @@ RUN npm install
 EXPOSE 12776
 
 # Run AirSignal when the container launches
-CMD ["node", "server.js"]
+ENTRYPOINT ["node"]
+CMD ["server.js"]
