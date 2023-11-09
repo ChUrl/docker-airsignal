@@ -8,7 +8,10 @@ jobs:
   build-docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Install docker
+        uses: papodaca/install-docker-action@main
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Login to container registry
         # run: echo ${{ secrets.CONTAINER_REGISTRY_TOKEN }} | docker login -u ${{ secrets.CONTAINER_REGISTRY_USER }} https://gitea.local.chriphost.de --password-stdin
         uses: docker/login-action@v3
