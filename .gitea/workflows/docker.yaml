@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.CONTAINER_REGISTRY_USER }}
           password: ${{ secrets.CONTAINER_REGISTRY_TOKEN }}
       - name: Build Docker image
-        run: docker build . --file Dockerfile --tag christoph/airsignal:latest
+        run: docker build . --file Dockerfile --tag gitea.local.chriphost.de/christoph/airsignal:latest
       - name: Push Docker image
         run: docker push gitea.local.chriphost.de/christoph/airsignal:latest
 
