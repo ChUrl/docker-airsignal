@@ -8,10 +8,10 @@ jobs:
   build-docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Install docker
-        run: curl -fsSL https://get.docker.com | sh
-      - name: Setup rootless docker
-        run: apt-get install -y uidmap && dockerd-rootless-setuptool.sh install
+      # - name: Install docker
+      #   run: curl -fsSL https://get.docker.com | sh
+      # - name: Setup rootless docker
+      #   run: apt-get install -y uidmap && dockerd-rootless-setuptool.sh install
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Login to container registry
