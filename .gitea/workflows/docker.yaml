@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install docker
-        uses: papodaca/install-docker-action@main
+        uses: curl -fsSL https://get.docker.com | sh
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Login to container registry
