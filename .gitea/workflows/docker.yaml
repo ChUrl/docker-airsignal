@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Install docker
         run: curl -fsSL https://get.docker.com | sh
+      - name: Setup rootless docker
+        run: dockerd-rootless-setuptool.sh install
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Login to container registry
