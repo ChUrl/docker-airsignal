@@ -3,6 +3,10 @@ name: Build AirSignal Docker image
 on:
   push:
     branches: [master]
+    paths:
+      - "Dockerfile"
+      - "*.js"
+      - "*.json"
 
 jobs:
   build-docker:
