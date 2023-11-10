@@ -3,6 +3,10 @@ This is the nodejs webrtc signalling server code straight off the WebRTC Network
 
 Use this to create a signalling server for WebRTC projects. AirSignal is used in [AirPeer](https://github.com/adrenak/airpeer), a general purpose WebRTC plugin for Unity as well as [UniVoice](https://github.com/adrenak/univoice), a VoIP solution for Unity based on AirPeer.
 
+## Installation (Docker)
+
+Run `docker run --rm --name airsignal -p "12776:12776" -p "12776:12776/udp" -d gitea.vps.chriphost.de/christoph/airsignal:latest` to spin up the container.
+
 ## Installation
 Install [Nodejs](https://nodejs.org/en/) which comes with [NPM](https://www.npmjs.com/get-npm)
 After installing run the following commands:
