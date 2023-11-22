@@ -2,8 +2,9 @@ name: Build AirSignal Docker image
 
 on:
   push:
-    branches: [master]
+    branches: [master, main]
     paths:
+      - ".gitea/workflows/docker.yaml"
       - "Dockerfile"
       - "*.js"
       - "*.json"
